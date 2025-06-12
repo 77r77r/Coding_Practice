@@ -7,6 +7,8 @@ class Solution {
     }
     
     public Integer attach(int x, int y){
-        return Integer.parseInt(Integer.toString(x) + Integer.toString(y));
+        //return Integer.parseInt(Integer.toString(x) + Integer.toString(y));
+        // 시간이 오래걸리는 것 같아서 형변환을 줄여봤다
+        return Integer.parseInt("" + x + y);
     }        
 }
