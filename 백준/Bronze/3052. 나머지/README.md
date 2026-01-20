@@ -28,3 +28,8 @@
 
  <p>첫째 줄에, 42로 나누었을 때, 서로 다른 나머지가 몇 개 있는지 출력한다.</p>
 
+---
+### 코드리뷰
+[동기분 코드](https://github.com/Mistle0108/Backjoon-Code-Capture/blob/main/%EB%B0%B1%EC%A4%80/Bronze/3052.%E2%80%85%EB%82%98%EB%A8%B8%EC%A7%80/%EB%82%98%EB%A8%B8%EC%A7%80.java)
+- Set 자료형을 사용
+- 이야기하다가 indexOf를 활용하는 방법에 대한 의견을 제시 -> Java의 배열에는 indexOf가 없으믈모 list의 indexOf를 활용하는 방식으로도 가능.
