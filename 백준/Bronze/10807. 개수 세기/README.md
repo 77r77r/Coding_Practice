@@ -26,3 +26,13 @@
 
  <p>첫째 줄에 입력으로 주어진 N개의 정수 중에 v가 몇 개인지 출력한다.</p>
 
+
+---
+
+### 코드 리뷰
+[동기 분 코드](https://github.com/Mistle0108/Backjoon-Code-Capture/blob/main/%EB%B0%B1%EC%A4%80/Bronze/10807.%E2%80%85%EA%B0%9C%EC%88%98%E2%80%85%EC%84%B8%EA%B8%B0/%EA%B0%9C%EC%88%98%E2%80%85%EC%84%B8%EA%B8%B0.java)
+
+- input이 int 인데, long일 필요가 있나? 오히려 입력 갯수의 타입보다 커지는 건 별로인 것 같음
+    > - 맞음 사실 stream의 coout()가 long 타입을 반환하여 long 타입을 사용한 것으로 불필요한 부분이 맞음  
+    > - stream로 시간복잡도는 동일하게 O(n)이고 오히려 성능면에서는 for문이 더 빠르다는 LLM의 피드백이 있었음 
+
