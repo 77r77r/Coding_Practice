@@ -28,3 +28,10 @@
 
  <p>첫째 줄에 그룹 단어의 개수를 출력한다.</p>
 
+---
+
+### 코드 리뷰
+
+[동기 분 코드](https://github.com/Mistle0108/Backjoon-Code-Capture/blob/main/%EB%B0%B1%EC%A4%80/Silver/1316.%E2%80%85%EA%B7%B8%EB%A3%B9%E2%80%85%EB%8B%A8%EC%96%B4%E2%80%85%EC%B2%B4%EC%BB%A4/%EA%B7%B8%EB%A3%B9%E2%80%85%EB%8B%A8%EC%96%B4%E2%80%85%EC%B2%B4%EC%BB%A4.java)
+다른 문자가 나온 경우, 그 문자가 이전에 나왔는지 여부만 체크하면 됨
+
