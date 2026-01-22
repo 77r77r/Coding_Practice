@@ -9,9 +9,9 @@ public class Main {
 
 		for (int i = 'a'; i <= 'z'; i++) {
 			int check = word.indexOf(i);
-			System.out.print(check + " ");
+			bw.write(check + " ");
 		}
-
+		
 		bw.close();
 	}
 }
