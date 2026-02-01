@@ -69,6 +69,7 @@ class Main {
 				change = 0;
 				top = 1;
 
+				// 흰색 시작으로 확인, k = 뜯어낼 부분의 줄
 				for (int k = h; k < h + 8; k++) {
 					char start = 'W';
 					char lineStart = start;
@@ -112,3 +113,4 @@ class Main {
 	}
 
 }
+
