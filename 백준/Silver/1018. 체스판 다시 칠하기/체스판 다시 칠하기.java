@@ -29,6 +29,7 @@ class Main {
 				change = 0;
 				int top = 1;
 
+				// 검정 시작으로 확인, k = 뜯어낼 부분의 줄
 				for (int k = h; k < h + 8; k++) {
 					char start = 'B';
 					char lineStart = start;
@@ -109,4 +110,5 @@ class Main {
 		br.close();
 		bw.close();
 	}
+
 }
