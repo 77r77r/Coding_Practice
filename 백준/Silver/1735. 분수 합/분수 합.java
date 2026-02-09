@@ -16,13 +16,6 @@ class Main {
 			int num1 = Integer.parseInt(st.nextToken());
 			int num2 = Integer.parseInt(st.nextToken());
 
-			int gcd = reduce(num1, num2);
-
-			if (gcd != 1) {
-				num1 /= gcd;
-				num2 /= gcd;
-			}
-
 			num[i][0] = num1;
 			num[i][1] = num2;
 		}
@@ -40,7 +33,6 @@ class Main {
 				numerator /= gcd;
 				denominator /= gcd;
 			}
-			
 		} else {
 			// 분모의 배수
 			int max = Math.max(num[0][1], num[1][1]);
