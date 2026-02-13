@@ -9,74 +9,69 @@ class Main {
 		StringTokenizer st;
 
 		int capacity = Integer.parseInt(br.readLine());
-
-		int[] deque = new int[capacity];
-		int front = 0;    // 현재 원소 위치
-		int rear = 0;    // 다음 원소가 들어갈 위치
+		int[] q = new int[capacity];
+		int front = 0;    // 현재 위치
+		int rear = 0;    // 넣을 위치
 		int size = 0;
 
 		for (int i = 0; i < capacity; i++) {
 			st = new StringTokenizer(br.readLine());
-			int command = Integer.parseInt(st.nextToken());
+			String command = st.nextToken();
 
 			switch (command) {
-				case 1: // addFirst
+				case "1":
 					front = (front - 1 + capacity) % capacity;
-					deque[front] = Integer.parseInt(st.nextToken());
+					q[front] = Integer.parseInt(st.nextToken());
 					size++;
 					break;
-				case 2: // addLast
-					deque[rear] = Integer.parseInt(st.nextToken());
+				case "2":
+					q[rear] = Integer.parseInt((st.nextToken()));
 					rear = (rear + 1) % capacity;
 					size++;
 					break;
-				case 3: // removeFirst
+				case "3":
 					if (size == 0) {
 						bw.write("-1\n");
 						break;
 					}
-					bw.write(deque[front] + "\n");
+
+					bw.write(q[front] + "\n");
 					front = (front + 1) % capacity;
 					size--;
 					break;
-				case 4: // removeLast
+				case "4":
 					if (size == 0) {
 						bw.write("-1\n");
 						break;
 					}
 					rear = (rear - 1 + capacity) % capacity;
-					bw.write(deque[rear] + "\n");
+					bw.write(q[rear] + "\n");
 					size--;
 					break;
-				case 5: // size
+				case "5":
 					bw.write(size + "\n");
 					break;
-				case 6: // empty
-					if (size == 0) {
-						bw.write("1\n");
-						break;
-					}
-					bw.write("0\n");
+				case "6":
+					bw.write(size == 0 ? "1\n" : "0\n");
 					break;
-				case 7: // peekFirst
+				case "7":
 					if (size == 0) {
 						bw.write("-1\n");
 						break;
 					}
-					bw.write(deque[front] + "\n");
+					bw.write(q[front] + "\n");
 					break;
-				case 8: // peekLast
+				case "8":
 					if (size == 0) {
 						bw.write("-1\n");
 						break;
 					}
-					bw.write(deque[(rear - 1 + capacity) % capacity] + "\n");
-					break;
-				default:
+					bw.write(q[(rear - 1 + capacity) % capacity] + "\n");
 					break;
 			}
-			bw.flush();
 		}
+
+		bw.flush();
 
 		br.close();
 		bw.close();
