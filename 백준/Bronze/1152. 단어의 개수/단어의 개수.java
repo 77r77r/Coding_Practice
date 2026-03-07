@@ -12,8 +12,8 @@ public class Main {
 			String[] words = word.split(" ");
 			bw.write(Integer.toString(words.length));
 		} else {
-			bw.write("0");
-		}
+            bw.write("0");
+        }
 
 		bw.close();
 	}
