@@ -12,21 +12,21 @@ public class Main {
 		int body = 0;
 
 		int cnt = 0;
-		int line = 1;
+		int l = 1;
 		
 		for (int x = 0; x < X; x++) {
 
-			if (cnt == line) {
-				line++;
+			if (cnt == l) {
+				l++;
 				cnt = 0;
 			}
 
 			if (l % 2 != 0) {
-				head = line - cnt;
+				head = l - cnt;
 				body = 1 + cnt;
 			} else {
 				head = 1 + cnt;
-				body = line - cnt;
+				body = l - cnt;
 			}
 
 			cnt++;
@@ -36,5 +36,4 @@ public class Main {
 		br.close();
 		bw.close();
 	}
-
 }
