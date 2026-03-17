@@ -9,9 +9,9 @@ class Main {
 		StringTokenizer st;
 
 		int n = Integer.parseInt(br.readLine());
-		int[] road = new int[n - 1];
-		int[] price = new int[n];
-		int money = 0;    // 비용
+		long[] road = new long[n - 1];
+		long[] price = new long[n];
+		long money = 0;    // 비용
 
 		st = new StringTokenizer(br.readLine());
 		for (int i = 0; i < n - 1; i++) {
@@ -27,7 +27,7 @@ class Main {
 		money += price[0] * road[0];
 
 		for (int i = 1; i < n - 1; i++) {
-			int min = Math.min(price[i], price[i - 1]);
+			long min = Math.min(price[i], price[i - 1]);
 			money += min * road[i];
 		}
 
