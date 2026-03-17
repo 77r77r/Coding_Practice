@@ -26,9 +26,16 @@ class Main {
 		// 최소 다음 구역까지 넣을 수 밖에 없음
 		money += price[0] * road[0];
 
+		long min = price[0];
+
+		// 내 이후에 나보다 싼 가격이 있는지 확인?
+
 		for (int i = 1; i < n - 1; i++) {
-			long min = Math.min(price[i], price[i - 1]);
-			money += min * road[i];
+			if (price[i] < min) {
+				min = price[i];
+			}
+
+			money += road[i] * min;
 		}
 
 		bw.write(String.valueOf(money));
