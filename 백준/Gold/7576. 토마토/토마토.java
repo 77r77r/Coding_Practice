@@ -12,7 +12,6 @@ class Main {
 		int col = Integer.parseInt(st.nextToken());
 
 		int[][] box = new int[col][row];
-		boolean[][] visited = new boolean[col][row];
 		int day = 0;
 
 		Queue<int[]> q = new LinkedList<>();
@@ -32,7 +31,6 @@ class Main {
 
 		// 모든 토마토의 위치를 확인하고
 		// 그 주변을 전파 시키고 +1 일
-
 		int[] dx = new int[] {-1, 1, 0, 0}; // 상 하 좌 우
 		int[] dy = new int[] {0, 0, -1, 1}; // 상 하 좌 우
 
@@ -55,8 +53,7 @@ class Main {
 						continue;
 					}
 					// 전파되지 않은 익은 토마토라면
-					if (box[x][y] == 0 && !visited[x][y]) {
-						visited[x][y] = true;
+					if (box[x][y] == 0) {
 						q.add(new int[] {x, y});
 						box[x][y] = 1;
 						anymore = false;
