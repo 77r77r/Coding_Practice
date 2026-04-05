@@ -14,6 +14,7 @@ class Main {
 		Map<Integer, Integer> ladder = new HashMap<>();
 		Map<Integer, Integer> snake = new HashMap<>();
 		boolean[] visited = new boolean[101];
+		int[] cnt = new int[101];
 
 		// 사다리
 		for (int i = 0; i < n; i++) {
@@ -29,13 +30,12 @@ class Main {
 
 		Queue<Integer> q = new LinkedList<>();
 		q.add(1);
-		int count = 0;
+		cnt[1] = 0;
 
 		while (!q.isEmpty()) {
 			int size = q.size();
 
 			while (size-- > 0) {
-
 				int now = q.poll();
 
 				for (int i = 0; i < 6; i++) {
@@ -57,23 +57,20 @@ class Main {
 						move = ladder.get(dice);
 					}
 
-					if (visited[move]) {
-						continue;
+					if (!visited[move]) {
+						visited[move] = true;
+						cnt[move] = cnt[now] + 1;
+						q.add(move);
 					}
-
-					visited[move] = true;
-					q.add(move);
 				}
 			}
-
-			count++;
 
 			if (visited[100]) {
 				break;
 			}
 		}
 
-		bw.write(count + "");
+		bw.write(cnt[100] + "");
 
 		bw.flush();
 		br.close();
