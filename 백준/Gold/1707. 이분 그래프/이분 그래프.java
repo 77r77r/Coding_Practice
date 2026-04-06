@@ -11,9 +11,6 @@ class Main {
 		int k = Integer.parseInt(br.readLine());
 		List<Integer>[] graph;
 
-		final int RED = 1;
-		final int BLUE = -1;
-
 		while (k-- > 0) {
 			boolean checkBipartite = true;
 
@@ -56,7 +53,7 @@ class Main {
 					Queue<Integer> q = new LinkedList<>();
 
 					q.add(i);
-					color[i] = RED;
+					color[i] = 1;
 
 					while (!q.isEmpty() && checkBipartite) {
 						int cur = q.poll();
